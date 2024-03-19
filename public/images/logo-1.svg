@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="378" height="307" viewBox="0 0 378 307">
+  <g id="App_Icon_Admin_Panel_1" data-name="App Icon Admin Panel 1" transform="translate(23014 18708)">
+    <rect id="Rectangle_17886" data-name="Rectangle 17886" width="378" height="307" transform="translate(-23014 -18708)" fill="none"/>
+    <g id="Group_905091" data-name="Group 905091" transform="translate(-95 -139)">
+      <g id="Group_905081" data-name="Group 905081" transform="translate(-22794.027 -18542)">
+        <rect id="Rectangle_17881" data-name="Rectangle 17881" width="131" height="40" rx="5" transform="translate(0.028 45)" fill="#e20a16"/>
+        <rect id="Rectangle_17882" data-name="Rectangle 17882" width="131" height="41" rx="5" transform="translate(87.028 0) rotate(90)" fill="#e20a16"/>
+        <g id="Group_108209" data-name="Group 108209" transform="translate(60.914 25.629)">
+          <g id="Rectangle_17883" data-name="Rectangle 17883" transform="translate(0.113 0.372)" fill="#fff" stroke="#002970" stroke-width="3">
+            <rect width="46" height="119" rx="23" stroke="none"/>
+            <rect x="1.5" y="1.5" width="43" height="116" rx="21.5" fill="none"/>
+          </g>
+          <g id="Rectangle_17884" data-name="Rectangle 17884" transform="translate(0.113 61.372)" fill="#002970" stroke="#002970" stroke-width="2">
+            <path d="M0,0H46a0,0,0,0,1,0,0V35A23,23,0,0,1,23,58h0A23,23,0,0,1,0,35V0A0,0,0,0,1,0,0Z" stroke="none"/>
+            <path d="M1,1H45a0,0,0,0,1,0,0V35A22,22,0,0,1,23,57h0A22,22,0,0,1,1,35V1A0,0,0,0,1,1,1Z" fill="none"/>
+          </g>
+        </g>
+        <g id="Group_108208" data-name="Group 108208" transform="translate(89.514 72.429)">
+          <g id="Rectangle_17883-2" data-name="Rectangle 17883" transform="translate(-0.487 -0.429)" fill="#fff" stroke="#002970" stroke-width="3">
+            <rect width="34" height="85" rx="17" stroke="none"/>
+            <rect x="1.5" y="1.5" width="31" height="82" rx="15.5" fill="none"/>
+          </g>
+          <g id="Rectangle_17884-2" data-name="Rectangle 17884" transform="translate(-0.487 42.571)" fill="#e20a16" stroke="#002970" stroke-width="3">
+            <path d="M0,0H34a0,0,0,0,1,0,0V25A17,17,0,0,1,17,42h0A17,17,0,0,1,0,25V0A0,0,0,0,1,0,0Z" stroke="none"/>
+            <path d="M1.5,1.5h31a0,0,0,0,1,0,0V25A15.5,15.5,0,0,1,17,40.5h0A15.5,15.5,0,0,1,1.5,25V1.5A0,0,0,0,1,1.5,1.5Z" fill="none"/>
+          </g>
+        </g>
+      </g>
+      <text id="Kgalagadi" transform="translate(-22862 -18338)" fill="#002970" font-size="65" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">K</tspan><tspan y="0" font-size="42">GALAGADI</tspan></text>
+      <text id="pharmacy" transform="translate(-22832 -18301)" fill="#e20a16" font-size="40" font-family="Sitka Small" font-weight="700" font-style="italic"><tspan x="0" y="0">pharmacy</tspan></text>
+    </g>
+  </g>
+</svg>

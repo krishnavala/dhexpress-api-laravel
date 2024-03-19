@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "kgalagadipharmacy",
+  "private_key_id": "b6563280194a39497e500ab794769692a53f0d72",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC+kfR1XJvF0I+x\ndpticjyGhTd5fIu2zQkGxZJYy5UgNlIlENxLALie8hZqfNlrzNPjr3MD/bbnLMsS\nOHZnpzbcS29vRckFBXs7Ff6K6ZHCX+ijbn45yDydiDNqHHFmurfU/6GbUTeoPuri\n43/53+LbOQQ27jCLe6GFxSU7IKA/BK6KO0uiEL5MlOBTLM8KYdAQrHwgiPTnJGq9\nqUJn1/5EvZ4ffvYacpwIkwbpGelH0oFivSfwoO9zdig09n6zVYxXxS1PaWC60GQH\nK0z7VV1vJzZ+PbuxPxkK61CgWq+oRxfTskHuNSvlgTJ/2eYQ/fYOVAUd0H2a2WHL\ntTpGCqvZAgMBAAECggEAA8vRhFL7cWXVrvHPZ5ch+IYH1F40REhyURW3dBheGJ2s\nZjufP8k8ZEIrSyTAigKzB9qTXnV74sAELZE9XpQ4pgvEpQFNX1G8IjGud+LuOeKC\nNls5nXoNJxAzAf6eDa9TgSU0eW0VQD88m5dvkbExii9pE5UMF4M3dPw34SUlvAuZ\nfVpqokhpc0uqCa3LfddkcExijqOGKVjLqgKCa8+HYcmM4firUt9rg/dyWXjaaZh5\niqgXMbuGZjTaLIfaPy6gK1L0+rWatjrJNURaap8YL5FZSs3b6BcuI9qx3JzRriEM\nO7t+DT8Puwm3g9fbF2GorbIyjF3Djq92sOPTBwMCVwKBgQDzHdInf/ifGTEsmYXL\ngPpLyNprBOpEW37yHUWibtmR7B5lpQumHU/6cT7PYNrkgoxlR+hYK/FywY8uUzm5\nAKl2NuBhkwPHujpd5liU1TMiei4gCDBXQlgguOJbH9HJTKWeaAFsHSdCVCJDMOII\nMb7F3g9haXsumuwxsH9owcATuwKBgQDIq0bs5M5YUkBwGo4ssIw6tUZ6A2LrmE2F\naSeiQ1K0pIX9QPwguNjS7k3IKsSUtpbGe/g8VzjsOgoyxZfBFTvzO9TzaYft8Xy9\ndxecNerGDayKa6E0mKcxxOFORavYWPBUsj15/4GcrgLCr3i2gj/c4JSZAT0bJJeE\n8gcQ/DIDewKBgQCEGGrsjWrwP0bpvczlwwG8lbift372f2Rddywz0tkioVHu1pua\nuYiQQmHnWe/1gz13dne3GMFLIgKDIDNX4xUwpyaJvdCq//Pgu1zcGW98RziyrOBf\nOSwbM3nCG2roXl4K0OYc8UY4kvA+49ucqjLG3h4rRp3ot8KoSQchS0zrKwKBgQCW\n0730kqnR0sjiOeOBDZXpDpWRYfg5Enm5++axXJ7ObhbT2sNnKOi36iwGdrbY/EBp\noYZcfEapr5o4vTGqC/bKhL8z0a88llTm55uUayYyhNaaF/nL2a1ZiBy8wzs92uOR\nFYOFrhlSlaw3fsJhk5bCwv6N3lN6kk9curm694Pz/wKBgDcwOe9K7WSG/OLmaqae\nsOuO/eJNSDN5EM0O8bfuSFsJ/hqx+gAGqQ+3Xn3W1D4kX0CPtlbUZ+ci9Ng2LxR0\nbbuF3l6KUkzeftD8TFsQHvYwgIfkwCEP6qtZ8zKGjRY38fWD60MsfGVzWewbzC0q\ns4UEJoPIn271zh5Oi3NCSc3L\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-tvshi@kgalagadipharmacy.iam.gserviceaccount.com",
+  "client_id": "102525286798609706704",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-tvshi%40kgalagadipharmacy.iam.gserviceaccount.com"
+}
