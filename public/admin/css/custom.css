@@ -1,0 +1,182 @@
+/**
+ *
+ * You can write your CSS code here, DO NOT touch the default JavaScript file
+ * because it will make it harder for you to update.
+ * 
+ */
+
+/*# sourceMappingURL=custom.css.map */
+a {
+    color: #002970;
+}
+
+.login-brand {
+    margin-bottom: 20px;
+}
+
+.login-brand img {
+    max-width: 250px;
+}
+
+.card.card-primary {
+    border-top: 2px solid #002970;
+}
+
+.card .card-header h4 {
+    color: #002970;
+}
+
+.btn-primary,
+.btn-primary.disabled {
+    box-shadow: none;
+    background-color: #002970;
+    border-color: #002970;
+}
+
+.btn-primary:active,
+.btn-primary:hover,
+.btn-primary.disabled:active,
+.btn-primary.disabled:hover {
+    background-color: #E20A16 !important;
+}
+
+.btn-primary:focus,
+.btn-primary.disabled:focus {
+    background-color: #E20A16 !important;
+}
+
+.btn-danger,
+.btn-danger.disabled {
+    box-shadow: none;
+    background-color: #e5424b;
+    border-color: #e5424b;
+}
+
+.form-control,
+.input-group-text,
+.custom-select,
+.custom-file-label {
+    border-color: #E8F0FE;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    border-color: #E8F0FE;
+    background-color: #E8F0FE;
+}
+
+.custom-radio .custom-control-input:checked~.custom-control-label::before,
+.custom-control-input:checked~.custom-control-label::before {
+    background-color: #002970 !important;
+}
+
+.main-sidebar .sidebar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-sidebar .sidebar-brand img {
+    max-width: 200px;
+}
+
+.main-sidebar .sidebar-brand.sidebar-brand-sm img {
+    max-width: 40px;
+}
+
+.navbar-bg {
+    background-color: #002970;
+}
+
+.main-sidebar .sidebar-menu li.active a {
+    color: #002970;
+}
+
+.badge.badge-primary {
+    background-color: #002970;
+}
+
+.page-item.active .page-link {
+    background-color: #002970;
+    border-color: #002970;
+}
+
+.page-link:hover {
+    background-color: #002970;
+}
+
+.page-item.disabled .page-link {
+    color: #002970;
+}
+
+.section .section-header h1 {
+    color: #002970;
+}
+
+.table .btn.btn-sm {
+    min-width: 28px;
+    min-height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.modal-slider .carousel-item {
+    text-align: center;
+}
+
+.modal-slider .img-size {
+    width: auto;
+    max-height: 500px;
+}
+
+.modal-backdrop {
+    /* display: none; */
+}
+
+.modal-slider .carousel-control-prev-icon {
+    background: none;
+}
+
+.modal-slider .carousel-control-next-icon {
+    background: none;
+}
+
+.modal-slider .carousel-control-next,
+.modal-slider .carousel-control-prev {
+    color: #002970;
+    opacity: 1;
+}
+
+#remarks {
+    height: auto;
+    resize: none;
+}
+
+.order-details-modal .modal-header {
+    text-align: center;
+}
+
+.less-availablestock-section,
+.most-expired-item-section,
+.order-reminder-section {
+    height: 500px;
+}
+
+.scrollbar {
+    overflow: auto;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background-color: #F2F9FF;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F2F9FF;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: #002970;
+}
