@@ -192,7 +192,6 @@ return [
         LaraIzitoast\LaraIzitoastServiceProvider::class,
         // Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class
         // Laravel\Socialite\SocialiteServiceProvider::class,
-        Kreait\Laravel\Firebase\ServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
     ],
 
