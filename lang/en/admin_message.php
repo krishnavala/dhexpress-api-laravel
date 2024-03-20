@@ -11,7 +11,7 @@ return [
     "confirm_pwst_same_new_pwd" => "Confirm password should be same as new password.",
     "old_password_not_valid" => "Old password entered is not valid.",
     "pwd_change_success" => "Password is changed successfully.",
-    "confirm_user_delete" => "Are you sure, you want to delete this user?",
+    "confirm_user_delete" => "Are you sure, you to delete this user?",
     "user_delete_success" => "The user is deleted successfully.",
     "user_delete_error" => "Something went wrong while deleting user.",
     "customer_not_find"=> "Customer not found.",
@@ -31,12 +31,14 @@ return [
         'updated' => 'Customer is updated successfully.',
         'add' => 'Customer is added successfully.',
         'delete' => 'Customer is deleted successfully.',
-        'confirm_delete'=> 'Are you sure you want to delete this cutomer?',
+        'confirm_delete'=> 'Are you sure to delete this cutomer?',
     ],
     "pdf_msg" =>[
         'download' => 'PDF is downloaded successfully.',
         'delete' => 'The customer from the PDF list has been successfully deleted.',
-        'confirm_delete'=> 'Are you sure you want to delete this PDF?',
+        'confirm_delete'=> 'Are you sure to delete this customer from PDF?',
+        'delete_all' => 'The all customer from the PDF list has been successfully deleted.',
+        'confirm_delete_all'=> 'Are you sure to delete all customer from PDF?',
     ]
 ];
 ?>

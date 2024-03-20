@@ -31,6 +31,7 @@ return [
     "pdf" => [
         "title" => "PDF List",
         "download" => "Download PDF",
+        "clear" => "Clear PDF",
     ],
     "404" => [
         "oops" => "Oops!",
