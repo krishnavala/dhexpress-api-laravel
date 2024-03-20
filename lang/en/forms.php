@@ -55,8 +55,8 @@ return [
 
     'customer' => [
         'group' => 'Group',
-        'customer_code' => 'Client Code',
-        'customer_name' => 'Client Name',
+        'customer_code' => 'Customer Code',
+        'customer_name' => 'Customer Name',
         'address' => 'Address',
         'pin_code' => 'Pin Code',
         'contact_no' => 'Contact No',
@@ -64,8 +64,8 @@ return [
         'remarks' => 'Remarks',
         "placeholder" =>[
             'group' => 'Enter Group',
-            'customer_code' => 'Enter Client Code',
-            'customer_name' => 'Enter Client Name',
+            'customer_code' => 'Enter Customer Code',
+            'customer_name' => 'Enter Customer Name',
             'address' => 'Enter Address',
             'pin_code' => 'Enter Pin Code',
             'contact_no' => 'Enter Contact No',

@@ -4,6 +4,7 @@
 @endsection
 @section('header-content')
 <h1>{{__("pages.dashboard.title")}}</h1>
+@include('admin.layouts.partials.breadcrumb-section')
 @endsection
 @section('css')
     
