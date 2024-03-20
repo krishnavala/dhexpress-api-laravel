@@ -40,7 +40,7 @@
                                             <button type="button" onclick='searchByCode();' class="btn btn-primary btn-sm"><i class="fa fa-search" aria-hidden="true"></i></button>
                                         </span>
                                     </div>
-                                    <label id="customer_code-error" style="display: none;" class="error" for="customer_code">Client Code is required.</label>
+                                    <label id="customer_code-error" style="display: none;" class="error" for="customer_code">Customer Code is required.</label>
                                 </div>
                             </div>
                             <!-- <div class="col-md-6">
@@ -99,11 +99,11 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <button type="submit" name="type" value="1" id="save_form" class="btn btn-primary btn-submit">{{ __('general.save') }}</button>
-                        <button type="submit" name="type" value="2" id="save_move_form" class="btn btn-primary btn-submit">{{ __('general.save_move') }}</button>
+                        <button type="submit" name="type" value="2" id="save_move_form" class="btn btn-info btn-submit">{{ __('general.save_move') }}</button>
                         <button type="button"  id="save_form_disabled"  disabled="true" class="btn btn-primary btn-submit" style="display: none;">{{ __('general.submitting') }}
                                 <span class="submit-loader_show"> <i class="fas fa-spinner fa-spin"></i> </span>
                         </button>
-                        <button type="button" onclick="location.href='{{ route('admin.customer') }}'" class="btn btn-outline-secondary mr-1">{{ __('general.cancel') }}</button>
+                        <button type="button" onclick="location.href='{{ route('admin.customer') }}'" class="btn btn-outline-danger mr-1">{{ __('general.cancel') }}</button>
                     </div>
                 </div>
             </form>
@@ -117,12 +117,20 @@
     <script src="{!! asset('admin/js/datepicker/bootstrap-datepicker.min.js') !!}"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-
+            // $('body').on('change', '.customer_code', function(e) {
+            //     $("#uuId").val('');
+            // });
             jQuery.validator.addMethod('ckrequired', function (value, element, params) {
                 var idname = jQuery(element).attr('id');
                 var messageLength =  jQuery.trim ( CKEDITOR.instances[idname].getData().replace(/&nbsp;/g, ' ').trim() );
-                console.log(messageLength,'messageLengthmessageLengthmessageLength');
                 return !params  || messageLength.length !== 0 ||  messageLength !== '';
+            }, "{{ __('admin_message.customer.address') }}");
+            jQuery.validator.addMethod('validateEmptySpace', function (value, element, params) {
+                var trimmedInput = value.trim();
+                if (trimmedInput === '') {
+                    return false; 
+                }
+                    return true;
             }, "{{ __('admin_message.customer.address') }}");
 
             $('#customer-form').validate({
@@ -140,9 +148,14 @@
                     },
                     'pin_code': {
                         required: true,
+                        maxlength:6,
+                        minlength:6
+
                     },
                     'contact_no' : {
-                        required:true
+                        required:true,
+                        maxlength:10,
+                        minlength:10
                     },
                     'invoice' : {
                         required:true
@@ -165,10 +178,15 @@
                         required: "{{ __('admin_message.customer.customer_name') }}"
                     },
                     'pin_code': {
-                        required: "{{ __('admin_message.customer.pin_code') }}"
+                        required: "{{ __('admin_message.customer.pin_code') }}",
+                        maxlength: "{{ __('admin_message.max-min-6') }}",
+                        minlength: "{{ __('admin_message.max-min-6') }}"
+                       
                     },
                     'contact_no': {
-                        required: "{{ __('admin_message.customer.contact_no') }}"
+                        required: "{{ __('admin_message.customer.contact_no') }}",
+                        maxlength: "{{ __('admin_message.max-min-10') }}",
+                        minlength: "{{ __('admin_message.max-min-10') }}"
                     },
                     'invoice': {
                         required: "{{ __('admin_message.customer.invoice') }}"
@@ -182,11 +200,13 @@
             });
            
         });
-        $(document).on('submit', '#customer-form', function() {
-             $('#save_form').hide();
-             $('#save_move_form').hide();
-             $('#save_form_disabled').show();
-             $(".submit-loader").show();
+        $(document).on('submit', '#customer-form', function(event) {
+            // event.preventDefault(); // Prevent default form submission
+
+            $('#save_form').hide();
+            $('#save_move_form').hide();
+            $('#save_form_disabled').show();
+            $(".submit-loader").show();
         });
         
         function searchByCode()

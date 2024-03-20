@@ -37,12 +37,12 @@ a {
 .btn-primary:hover,
 .btn-primary.disabled:active,
 .btn-primary.disabled:hover {
-    background-color: #E20A16 !important;
+    background-color: #002970 !important;
 }
 
 .btn-primary:focus,
 .btn-primary.disabled:focus {
-    background-color: #E20A16 !important;
+    background-color: #002970 !important;
 }
 
 .btn-danger,

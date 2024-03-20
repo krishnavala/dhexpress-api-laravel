@@ -79,7 +79,7 @@
                 //common delete function
                 deleteFire(deleteRoute, data, tableId, confirmMsg);
             });
-
+           
         });
 
         function customerList() {
