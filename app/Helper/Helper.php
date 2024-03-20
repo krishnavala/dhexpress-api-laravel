@@ -1,6 +1,5 @@
 <?php
 
-use Kreait\Firebase\Messaging\CloudMessage;
 use App\Notifications\Order\SendUpdateStatusNotification;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
@@ -95,54 +94,9 @@ function sendPushNotification($title, $body, $data, $deviceToken)
 }
 
 // send single push notificatin using cloud messaging
-function sendPushNotificationNew($notification, $notificationData, $deviceToken)
-{
-    $messaging = app('firebase.messaging');
-    $clickAction = "FLUTTER_NOTIFICATION_CLICK";
 
-    $message = CloudMessage::fromArray([
-        'token' => $deviceToken,
-        'notification' => $notification,
-        'data' => $notificationData,
-        'click_action' => $clickAction,
-    ]);
-    $messaging->send($message);
-
-    return true;
-}
 
 // send multiple push notificatin using cloud messaging
-function sendMulticastPushNotification($notification, $notificationData, $deviceTokens)
-{
-    $messaging = app('firebase.messaging');
-    $clickAction = "FLUTTER_NOTIFICATION_CLICK";
-
-    try {
-        $message = CloudMessage::fromArray([
-            'notification' => $notification,
-            'data' => $notificationData,
-            'click_action' => $clickAction,
-        ]);
-        $messaging->sendMulticast($message, $deviceTokens);
-
-        /*
-        $report = $messaging->sendMulticast($message, $deviceTokens);
-
-        Log::info('Successful sends: ' . $report->successes()->count() . PHP_EOL);
-        Log::info('Failed sends: ' . $report->failures()->count() . PHP_EOL);
-
-        if ($report->hasFailures()) {
-            foreach ($report->failures()->getItems() as $failure) {
-                Log::info('error:'. $failure->error()->getMessage() . PHP_EOL);
-            }
-        } */
-    } catch (Exception $e) {
-        Log::info($e->getMessage());
-    }
-
-    // return true;
-}
-
 function thousandsFormat($num)
 {
     if ($num > 1000) {
