@@ -14,12 +14,16 @@
             <li class="{{ (in_array(Request::route()->getName(),['admin.dashboard','admin.mostexpireditem.index','admin.lessavailablestock.index','admin.orderreminder.index'])?"active":"") }}">    
                 <a class="nav-link" href="{{ route('admin.dashboard') }}"  data-toggle="tooltip" data-original-title="{{ __('pages.dashboard.title') }}"><i class="fas fa-fire"></i> <span>{{ __('pages.dashboard.title') }}</span></a>
             </li>
-            <li class="{{ in_array(Request::route()->getName(),['admin.customer','admin.customer.add','admin.customer.edit']) ? ' active' : '' }}">
-                <a class="nav-link" href="{{ route('admin.customer') }}"  data-toggle="tooltip" data-original-title="{{ __('pages.customer.title') }}"><i class="fas fa-users "></i> <span>{{ __('pages.customer.title') }}</span></a>
-            </li>
             <li class="{{ in_array(Request::route()->getName(),['admin.customer-pdf']) ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.customer-pdf') }}"  data-toggle="tooltip" data-original-title="{{ __('pages.pdf.title') }}"><i class="far fa-address-card"></i> <span>{{ __('pages.pdf.title') }}</span></a>
             </li>
+            <li class="{{ in_array(Request::route()->getName(),['admin.customer','admin.customer.add','admin.customer.edit']) ? ' active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.customer.manage.form') }}"  data-toggle="tooltip" data-original-title="{{ __('pages.customer.title') }}"><i class="fas fa-cogs "></i> <span>{{ __('pages.customer.add') }}</span></a>
+            </li>
+            <li class="{{ in_array(Request::route()->getName(),['admin.customer','admin.customer.add','admin.customer.edit']) ? ' active' : '' }}">
+                <a class="nav-link" href="{{ route('admin.customer') }}"  data-toggle="tooltip" data-original-title="{{ __('pages.customer.title') }}"><i class="fas fa-users "></i> <span>{{ __('pages.customer.title') }}</span></a>
+            </li>
+          
             <li class="{{ Request::route()->getName() == 'admin.users' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.users') }}"  data-toggle="tooltip" data-original-title="{{ __('pages.user.title') }}"><i class="fas fa-th-list"></i> <span>{{ __('pages.user.title') }}</span></a>
             </li>

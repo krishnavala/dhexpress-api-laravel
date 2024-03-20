@@ -79,7 +79,7 @@ class UserController extends Controller
                 $data['mobile'] = $pval->mobile;
                 $data['created_at'] = date("M d, Y", strtotime($pval->created_at));
                 $delUrl = "<a href='#' data-id='" . Crypt::encrypt($pval->id) . "' class='delete_user ml-2' style='text-decoration:none;'><i class='fas fa-trash'></i></a>";
-                $data['detail'] = $delUrl;
+                $data['detail'] = '-';
                 $pdata[] = $data;
                 $i++;
             }

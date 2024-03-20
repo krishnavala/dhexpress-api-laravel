@@ -109,18 +109,22 @@ class PDFDataController extends Controller
     }
     public function downloadPDF(Request $request)
     {
-        // try {
+        try {
             $customerList = Customer::with(['customerDetail'])->has('customerPdf')->get();
+            if(count( $customerList) == 0 ){
+                notify()->error('The customer was not found in the PDF list..');
+                return redirect()->back();
+            }
             $pdfContent = PDF::loadView('pdf',compact('customerList'));
             //  return view('pdf', compact('customerList'));
             return $pdfContent->download('invoice.pdf');
            
-        // } catch (Exception $ex) {
-        //     Log::info('Exception while downloading pdf page');
-        //     Log::error($ex);
-        //     notify()->error(__('admin_message.exception_message'));
-        //     return redirect()->back();
-        // }
+        } catch (Exception $ex) {
+            Log::info('Exception while downloading pdf page');
+            Log::error($ex);
+            notify()->error(__('admin_message.exception_message'));
+            return redirect()->back();
+        }
     }
     public function pdfDelete(Request $request)
     {

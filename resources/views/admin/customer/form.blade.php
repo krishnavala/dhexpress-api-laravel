@@ -212,11 +212,21 @@
                 $("#pin_code").val(res.customer?.customer_detail.pin_code);
                 $("#contact_no").val(res.customer?.customer_detail.contact_no);
                 $("#invoice").val(res.customer?.customer_detail.invoice);
-                $("#address").val(res.customer?.customer_detail.address);
+                CKEDITOR.instances['address'].setData(res.customer?.customer_detail.address);
+                CKEDITOR.instances['remarks'].setData(res.customer?.customer_detail.remarks);
+                laravel.success('The customer details are being displayed in the form.');
               }
               else
               {
-                alert('22');
+                laravel.error('Customer for this code is not found.');
+                $("#uuId").val('');
+                $("#group").val('');
+                $("#customer_name").val('');
+                $("#pin_code").val('');
+                $("#contact_no").val('');
+                $("#invoice").val('');
+                CKEDITOR.instances['address'].setData('');
+                CKEDITOR.instances['remarks'].setData('');
               }   
                      
               },

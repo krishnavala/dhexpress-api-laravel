@@ -8,7 +8,7 @@ return [
         "title" => "Dashboard",
         "customer" => "Total Customers",
         "user" => "Total Users",
-        "pdf" => "Total Pdf",
+        "pdf" => "Total Customer In PDF",
         "order" => "Total Orders",
         "pending_order" => "Total Pending Orders",
         "most_expired_item"=>"Expiring products",
