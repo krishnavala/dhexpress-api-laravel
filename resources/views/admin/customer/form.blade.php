@@ -117,21 +117,21 @@
     <script src="{!! asset('admin/js/datepicker/bootstrap-datepicker.min.js') !!}"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            // $('body').on('change', '.customer_code', function(e) {
-            //     $("#uuId").val('');
-            // });
+            $('body').on('change', '#customer_code', function(e) {
+                $("#uuId").val('');
+            });
             jQuery.validator.addMethod('ckrequired', function (value, element, params) {
                 var idname = jQuery(element).attr('id');
                 var messageLength =  jQuery.trim ( CKEDITOR.instances[idname].getData().replace(/&nbsp;/g, ' ').trim() );
                 return !params  || messageLength.length !== 0 ||  messageLength !== '';
             }, "{{ __('admin_message.customer.address') }}");
-            jQuery.validator.addMethod('validateEmptySpace', function (value, element, params) {
-                var trimmedInput = value.trim();
-                if (trimmedInput === '') {
-                    return false; 
-                }
-                    return true;
-            }, "{{ __('admin_message.customer.address') }}");
+            // jQuery.validator.addMethod('validateEmptySpace', function (value, element, params) {
+            //     var trimmedInput = value.trim();
+            //     if (trimmedInput === '') {
+            //         return false; 
+            //     }
+            //         return true;
+            // }, "{{ __('admin_message.customer.address') }}");
 
             $('#customer-form').validate({
                 ignore: [],
@@ -162,7 +162,7 @@
                     },
                     'address' : {
                         ckrequired:true,
-                        validateEmptySpace:true
+                        // validateEmptySpace:true
                     }
                    
                 },
