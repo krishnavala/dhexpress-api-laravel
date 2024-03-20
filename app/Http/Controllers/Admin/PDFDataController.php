@@ -107,6 +107,7 @@ class PDFDataController extends Controller
             return response()->json($response);
         }
     }
+    
     public function downloadPDF(Request $request)
     {
         try {
