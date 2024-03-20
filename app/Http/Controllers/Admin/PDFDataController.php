@@ -24,6 +24,7 @@ class PDFDataController extends Controller
     {
         $title = __('pages.pdf.title');
         $download_title = __('pages.pdf.download');
+        $clear_title = __('pages.pdf.clear');
         $download_route = route('admin.customer-pdf.download');
         $customerInfo = null;
         return view('admin.customer.index-pdf', compact('id', 'title', 'customerInfo','download_title','download_route'));
@@ -88,8 +89,8 @@ class PDFDataController extends Controller
                    $data['contact_no'] = $pval->contact_no ?? '-';
                    $data['invoice'] = $pval->invoice ?? '-';
 
-                   $editUrl = "<a href='" . route('admin.customer.manage.form', $pval->uuid)  . "'><i class='fas fa-pencil-alt' ></i></a>";
-                   $delUrl = "<a href='#' data-id='" . $pval->uuid . "' class='delete_customer ml-2' style='text-decoration:none;'><i class='fas fa-trash'></i></a>";
+                   $editUrl = "<a href='" . route('admin.customer.manage.form', $pval->uuid)  . "' class='btn btn-primary'><i class='fas fa-pencil-alt' ></i></a>";
+                   $delUrl = "<a href='#' data-id='" . $pval->uuid . "' class='delete_customer ml-2 btn btn-danger' style='text-decoration:none;'><i class='fas fa-trash'></i></a>";
                     $data['action'] = $editUrl . $delUrl;
                     $pdata[] = $data;
                 }
@@ -131,17 +132,23 @@ class PDFDataController extends Controller
     {
         try {
             $customerUuId = $request->customer_uuid ?? '';
-            $customer = Customer::where('uuid', $customerUuId)->first();
-           
-            if(empty($customer->id)) {
-                $response['status'] = false;
-                $response['message'] = __('admin_message.customer_not_find');
-                return response()->json($response);
+            if($customerUuId !== '' && $customerUuId !== 'all'){
+                $response['message'] = __('admin_message.pdf_msg.delete');
+                $customer = Customer::where('uuid', $customerUuId)->first();
+               
+                if(empty($customer->id)) {
+                    $response['status'] = false;
+                    $response['message'] = __('admin_message.customer_not_find');
+                    return response()->json($response);
+                }
+                CustomerPdf::where('customer_id', $customer->id)->delete();
+            }else if($customerUuId == 'all'){
+                $response['message'] = __('admin_message.pdf_msg.delete_all');
+                CustomerPdf::query()->delete();
             }
-            $CustomerPdf = CustomerPdf::where('customer_id', $customer->id)->delete();
             $response = [];
             $response['status'] = true;
-            $response['message'] = __('admin_message.pdf_msg.delete');
+            
             return response()->json($response);
         } catch (Exception $ex) {
             Log::info('Error in delete customer');

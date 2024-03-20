@@ -11,9 +11,13 @@
     <div class="row">
         <div class="col-xl-12">
             <div class="contenttopbar">
-                <ul class="d-flex align-content-center float-right assigned-order">
+                <ul class="d-flex align-content-center float-right assigned-order gap-6">
                     <a href="{{ $download_route }}" class="btn btn-primary">
-                        <i class="fas fa-plus"></i> {{ $download_title }}
+                    <i class="fa fa-download" aria-hidden="true"></i> {{ $download_title }}
+                    </a>
+                    <a href="{{ $download_route }}" class="btn btn-danger delete_all_customer" data-id='all'>
+                    <i class="fa fa-trash" aria-hidden="true"></i>
+                         {{__('pages.pdf.clear') }}
                     </a>
 
                 </ul>
@@ -58,6 +62,18 @@
                     customer_uuid: $(this).attr('data-id')
                 };
                 var confirmMsg = "{{ __('admin_message.pdf_msg.confirm_delete') }}";
+                var deleteRoute = "{{ route('admin.pdf.delete') }}";
+                var tableId = "customer_listing";
+                //common delete function
+                deleteFire(deleteRoute, data, tableId, confirmMsg);
+            });
+            $('body').on('click', '.delete_all_customer', function(e) {
+                e.preventDefault();
+                // var requestId = $(this).attr('data-id');
+                var data = {
+                    customer_uuid: $(this).attr('data-id')
+                };
+                var confirmMsg = "{{ __('admin_message.pdf_msg.confirm_delete_all') }}";
                 var deleteRoute = "{{ route('admin.pdf.delete') }}";
                 var tableId = "customer_listing";
                 //common delete function

@@ -239,3 +239,6 @@
     }
     .action-footer  div{flex: 0 0 50%;max-width: 50%;}
 }
+.gap-6{
+    gap: 6px;
+}

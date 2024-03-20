@@ -109,8 +109,8 @@ class CustomerController extends Controller
                     
                     
                         // $editUrl = "<a href='" . route('admin.customer.edit', $pval->uuid)  . "' class='ml-2'><i class='fas fa-pencil-alt' ></i></a>";
-                    $editUrl = "<a href='" . route('admin.customer.manage.form', $pval->uuid)  . "'><i class='fas fa-pencil-alt' ></i></a>";
-                    $delUrl = "<a href='#' data-id='" . $pval->uuid . "' class='delete_customer ml-2' style='text-decoration:none;'><i class='fas fa-trash'></i></a>";
+                    $editUrl = "<a href='" . route('admin.customer.manage.form', $pval->uuid)  . "' class='btn btn-primary'><i class='fas fa-pencil-alt' ></i></a>";
+                    $delUrl = "<a href='#' data-id='" . $pval->uuid . "' class='delete_customer btn btn-danger ml-2' style='text-decoration:none;'><i class='fas fa-trash'></i></a>";
 
                     $data['action'] =  $editUrl . $delUrl;
                     $pdata[] = $data;
